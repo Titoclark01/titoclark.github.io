@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tito Clark Website</title>
+    <!-- Load Tailwind CSS --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Particles.js Library --><script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+    <!-- Configure Tailwind theme --><script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#1e40af', // Darker Blue
+                        'secondary-cyan': '#06b6d4', // Cyan (Used for light blue accent)
+                        'telegram': '#229ED9',
+                        'facebook': '#1877F2',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Ensures the particle canvas covers the full viewport */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Changed background to dark navy blue for blue accent theme */
+            background-color: #0A1930; 
+            background-image: url('');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: 50% 50%;
+            z-index: -1; /* Place it behind everything else */
+        }
+        /* Ensure the main content header sits above the particle background */
+        .content-container {
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Styles for the glowing and pulsing logo */
+        .glowing-logo {
+            max-width: 150px; /* Adjust as needed */
+            height: auto;
+            /* Apply initial glow filter using secondary-cyan color */
+            filter: drop-shadow(0 0 8px #06b6d4) drop-shadow(0 0 15px #06b6d4) drop-shadow(0 0 25px #06b6d4);
+            animation: pulse-glow 2.5s infinite alternate;
+        }
+
+        @keyframes pulse-glow {
+            from {
+                filter: drop-shadow(0 0 8px #06b6d4) drop-shadow(0 0 12px #06b6d4) drop-shadow(0 0 16px #06b6d4);
+            }
+            to {
+                filter: drop-shadow(0 0 15px #06b6d4) drop-shadow(0 0 25px #06b6d4) drop-shadow(0 0 35px #06b6d4);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-white" id="top"> <!-- Changed body text to white --><!-- 1. Particle Background Canvas --><div id="particles-js"></div>
+
+    <!-- 2. Hero Section: Logo and CTA (Content is now centered on top of particles) --><header class="h-screen flex flex-col justify-center items-center p-8 text-center content-container">
+        
+        <!-- Content Card: Now transparent --><div class="p-8 md:p-12 rounded-2xl w-full max-w-xl">
+            
+            <!-- Logo Area --><div class="space-y-4 mb-12">
+                
+                <!-- NEW GLOWING LOGO PLACEHOLDER -->
+                <img src="OFFICIAL LOGO1.png" 
+                     alt="Your Brand Logo" 
+                     class="glowing-logo mx-auto mb-6">
+                
+                <h1 class="text-5xl md:text-6xl font-extrabold leading-tight">
+                    Tito<span class="text-secondary-cyan">Clark</span> <!-- Changed text color for contrast --></h1>
+                <p class="text-lg text-gray-200">Manood ng Live sa ating Facebook Page, sumali sa ating Official Telegram Group at magregister sa link sa ibaba.</p>
+            </div>
+
+            <!-- === START: Unified CTA and Social Block === --><div class="flex flex-col items-center mt-10 w-full max-w-xl mx-auto">
+                
+                <!-- Two Register Buttons Group (Modified) --><div class="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full">
+                    <!-- NOTE: Update the hrefs below to your actual external registration links --><!-- Register Button 1: Basic Access --><a href="https://tinyurl.com/MPtitoclark" target="_blank" rel="noopener noreferrer" class="text-center px-4 py-3 text-sm font-semibold text-white bg-primary-blue hover:bg-secondary-cyan rounded-xl shadow-lg transition duration-300 transform hover:scale-[1.03] focus:outline-none focus:ring-4 focus:ring-primary-blue/50" aria-label="Register Basic Access">
+                        MEGAPERYA
+                    </a>
+
+                    <!-- Register Button 2: Pro Membership (Highlighted) --><a href=" https://bit.ly/HPTitoC" target="_blank" rel="noopener noreferrer" class="text-center px-4 py-3 text-sm font-semibold text-white bg-secondary-cyan hover:bg-primary-blue rounded-xl shadow-lg transition duration-300 transform hover:scale-[1.03] focus:outline-none focus:ring-4 focus:ring-secondary-cyan/50" aria-label="Register Pro Membership">
+                        HIYANG PLUS
+                    </a>
+                </div>
+
+                <!-- Social Media Links (Placed below the buttons) --><div class="flex space-x-10 mt-12 justify-center">
+                    
+                    <!-- Facebook Container -->
+                    <div class="flex flex-col items-center space-y-2">
+                        <!-- Facebook Button -->
+                        <a href="https://www.facebook.com/TitoClarkGaming" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-12 h-12 rounded-full text-white bg-facebook hover:bg-blue-800 transition duration-200 shadow-lg" aria-label="Visit us on Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <span class="text-sm text-gray-400">Follow on Facebook</span>
+                    </div>
+
+                    <!-- Telegram Container -->
+                    <div class="flex flex-col items-center space-y-2">
+                        <!-- Telegram Button -->
+                        <a href="https://t.me/+9vUORowBThY0NDhl" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-12 h-12 rounded-full text-white bg-telegram hover:bg-blue-600 transition duration-200 shadow-lg" aria-label="Join our Telegram Channel">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18.8 2.3c-2.3-1.6-4.9-2-7.5-1.9-5.9 0-8.8 3.5-9.3 7.8-.3 2.7 1.5 5.5 4.3 6.6l-.6 3.9c-.1.7.3 1.4 1 1.6.4.1.7.1 1.1-.1l3.5-2.6c2 1.3 4.2 1.7 6.4 1.5 5.9 0 8.8-3.5 9.3-7.8.3-2.7-1.5-5.5-4.3-6.6zM13 14L9 12l5-3 1 5z"/>
+                            </svg>
+                        </a>
+                        <span class="text-sm text-gray-400">Join on Telegram</span>
+                    </div>
+                </div>
+            </div>
+            <!-- === END: Unified CTA and Social Block === --></div>
+        
+    </header>
+
+    <footer class="bg-gray-800 text-white p-4 text-center text-sm content-container">
+        &copy; 2025 TitoClarkGaming. All rights reserved.
+    </footer>
+
+    <!-- Initialization Script for Particles.js -->
+    <script>
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 180, // Increased particle count for denser starfield
+                    "density": {
+                        "enable": true,
+                        "value_area": 800 // Tighter distribution
+                    }
+                },
+                "color": {
+                    "value": "#ffffff" // Base particle color is white for glow effect
+                },
+                "shape": {
+                    "type": "circle",
+                },
+                "opacity": {
+                    "value": 0.8,
+                    "random": true, 
+                    "anim": {
+                        "enable": true, // Enabled animation for twinkling
+                        "speed": 0.5, // Slower twinkle speed
+                        "opacity_min": 0.3,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 1.2, // Reduced size for a fine star-field effect
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 100, // Reduced link distance
+                    "color": "#06b6d4", // Bright secondary-cyan for links (the blue accent)
+                    "opacity": 0.6,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 0.8, // Very slow drift
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse" // Changed to repulse for a subtle wave effect on hover
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 140,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "repulse": {
+                        "distance": 80, // Closer repulse distance
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_number": 4
+                    },
+                    "remove": {
+                        "particles_number": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+</body>
+</html>
